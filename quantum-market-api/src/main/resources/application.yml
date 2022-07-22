@@ -1,0 +1,22 @@
+spring.application.name: quantum-market-api
+spring.profiles.active: local
+
+spring:
+  profiles:
+    include:
+      - catalog
+      - order
+  config:
+    import:
+      - logging.yml
+
+---
+spring.config.activate.on-profile: local
+
+
+---
+spring.config.activate.on-profile: staging
+
+
+---
+spring.config.activate.on-profile: prod
