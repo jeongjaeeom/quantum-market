@@ -1,0 +1,15 @@
+spring.application.name: order-api
+
+---
+spring.config.activate.on-profile: local
+
+
+---
+spring.config.activate.on-profile: staging
+
+
+---
+spring.config.activate.on-profile: prod
+
+
+
