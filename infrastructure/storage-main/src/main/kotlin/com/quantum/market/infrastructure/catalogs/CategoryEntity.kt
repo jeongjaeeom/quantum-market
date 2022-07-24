@@ -1,5 +1,6 @@
 package com.quantum.market.infrastructure.catalogs
 
+import com.quantum.market.infrastructure.BaseEntity
 import java.util.*
 import javax.persistence.*
 
@@ -10,4 +11,4 @@ internal class CategoryEntity(
     val code: String,
     val name: String,
     @ManyToOne val parent: CategoryEntity? = null
-)
+) : BaseEntity()
