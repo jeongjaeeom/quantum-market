@@ -2,6 +2,7 @@
 Quantum Market 온라인 쇼핑몰 토이 프로젝트
 
 ## References
+* [SpringBoot + Kotlin 멀티 모듈 구성](https://www.youtube.com/watch?v=ODSFmLdecX0)
 * [DDD sample](http://dddsample.sourceforge.net)
 * [Domain-Driven Design - Domain Layer](https://archfirst.org/domain-driven-design-7-domain-layer)
 * [Comparison of Domain-Driven Design and Clean Architecture Concepts](https://khalilstemmler.com/articles/software-design-architecture/domain-driven-design-vs-clean-architecture)
