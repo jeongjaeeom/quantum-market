@@ -1,14 +1,10 @@
 rootProject.name = "quantum-market"
 include(
+    "domain",
+    "infrastructure:storage-main",
     "quantum-market-api",
     "support:common",
     "support:logging",
-//    "catalogs:api",
-//    "catalogs:modules:domain",
-//    "catalogs:modules:rds",
-//    "orders:order-api",
-//    "orders:modules:domain",
-//    "orders:modules:rds",
 )
 
 pluginManagement {

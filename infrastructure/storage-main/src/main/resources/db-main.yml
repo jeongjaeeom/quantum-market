@@ -1,0 +1,64 @@
+spring:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.default_batch_fetch_size: 100
+
+---
+spring.config.activate.on-profile: local
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+quantum-market:
+  datasource:
+    main:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:33306/quantum-market?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&serverTimezone=UTC
+      username: quantum-market
+      password: znjsxjaakzpt!@
+      pool-name: main-db-pool
+
+---
+spring.config.activate.on-profile: local-dev
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  h2:
+    console:
+      enabled: true
+
+quantum-market:
+  datasource:
+    main:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:quantum-market;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      pool-name: main-db-pool
+      data-source-properties:
+        rewriteBatchedStatements: true
+
+---
+spring.config.activate.on-profile: dev
+
+
+---
+spring.config.activate.on-profile: staging
+
+
+---
+spring.config.activate.on-profile: live
