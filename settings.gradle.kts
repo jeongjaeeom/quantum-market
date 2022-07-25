@@ -1,7 +1,8 @@
 rootProject.name = "quantum-market"
 include(
-    "domain",
-    "infrastructure:storage-main",
+    "quantum-market-domain",
+    "quantum-market-application",
+    "quantum-market-infrastructure:storage-main",
     "quantum-market-api",
     "support:common",
     "support:logging",
